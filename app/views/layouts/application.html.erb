@@ -24,6 +24,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
        <% if signed_in? %>
+        <li><%= link_to "Nuevo_pin", new_pin_path %></li>
         <li><%= link_to "Salir", destroy_user_session_path %></li>
         <% else %>
         <li><%= link_to "Registrarse", new_user_registration_path %></li>
