@@ -26,6 +26,8 @@ gem 'devise'
 
 gem 'masonry-rails'
 
+gem 'acts_as_votable', '~> 0.11.1'
+
 
 
 group :production do

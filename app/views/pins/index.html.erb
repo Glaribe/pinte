@@ -5,7 +5,10 @@
         <img src="<%= pin.image_url %>" alt="<%= pin.title %>">
         <h2><%= pin.title %></h2>
         <p class="user">Publicado por <%= pin.user.email %></p>
-        <li><%= link_to "Eliminar", pin.destroy %></li>
+        <div class="actions">
+          	<span class="glyphicon glyphicon-heart"><%= link_to "", like_pin_path class: "btn btn-danger btn-block"
+          	%></span>  
+        </div>
       </div>
     </div>
   <% end %>

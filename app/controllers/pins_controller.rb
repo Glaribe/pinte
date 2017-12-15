@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :upvote]
 
   def index
     @pins = Pin.all
@@ -23,6 +23,12 @@ class PinsController < ApplicationController
     @pin = Pin.destroy
     redirect_to root_path
   end
+
+  def upvote 
+    @pin.upvote_by current_user
+    redirect_to root_path
+  end
+
 
   private
     def pin_params
